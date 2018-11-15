@@ -5,11 +5,6 @@ body {
     font-family: 'Lato', Verdana, sans-serif;
     font-size: 20px;
     line-height: 1.6;
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
 }
 
 #homeButton {
@@ -61,10 +56,3 @@ body {
     font-size: calc(5.5px + .65vw);
     margin: 0px 75px 0px 75px;
 }
-
-/* fade in */
-@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
-/* Firefox */ @-moz-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
-/* Safari, Chrome */ @-webkit-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
-/* IE */ @-ms-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
-/* Opera */ @-o-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
