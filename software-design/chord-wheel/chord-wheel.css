@@ -1,0 +1,233 @@
+/* chordWheel.css : Kyle Laviana */
+
+html { 
+    text-align: center;
+}
+
+body { 
+    background-color: rgb(199, 222, 243);
+    display: inline-block;
+    font-family: 'Raleway', Verdana, sans-serif;
+}
+
+a { color:black } /* prevent href coloration */
+
+#homeButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 3px 3px;
+    background-color: white;
+    color:#A0C6EA;
+    font-family: 'Raleway';
+    outline: none;
+}
+
+#homeButton:hover {
+    background-color: #A0C6EA;
+    color: white;
+}
+
+.tooltips {
+    position: fixed;
+    float: left;
+    margin-left: 18%;
+    margin-top: 10%;
+    z-index: 2;
+}
+
+#theChordWheel {
+    font-size: 40px;
+    float: left;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+#dropdownMenuWrapper {
+    margin-right: -2.5%;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+#mysvg {
+    background-color: blanchedalmond;
+    display: block; 
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    /*width: 1200px;*/
+    width: 95vw;
+    height: 300px;
+}
+
+.hide { 
+    display: none 
+}
+
+.selected {
+    opacity: .3;
+}
+
+#currentchordsWrapper {
+    float: left;
+    margin-left: 15%;
+    margin-top: 2%;
+}
+
+#currentchords {
+    float: left;
+    margin-left: 15%;
+    width: 300px; height: 125px; 
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 1px;
+    background-color: blanchedalmond;
+    line-height: 25px;
+    border-radius: 10px;
+}
+
+#commonchordsWrapper {
+    float: right;
+    margin-right: 15%;
+    margin-top: 2%;
+}
+
+#commonchords {
+    float: right;
+    margin-right: 15%;
+    width: 300px; height: 125px;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 1px;
+    background-color: blanchedalmond;
+    line-height: 25px;
+    border-radius: 10px;
+}
+
+#svg-wrapper{
+    position: relative;
+}
+
+#svg-wrapper #playButton{
+    background-color: blanchedalmond;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 0px;
+    border-style: none;
+    outline: none;
+}
+
+#buttonBox {
+    width: 30px;
+    height: 30px;
+}
+  
+/* fade in */
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+/* Firefox */ @-moz-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+/* Safari, Chrome */ @-webkit-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+/* IE */ @-ms-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+/* Opera */ @-o-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+
+/* Hover Bold */
+.hvr-bold:hover,
+.hvr-bold:focus,
+.hvr-bold:active {
+    font-weight: bold;
+    transition-duration: 0.05s; 
+}
+
+/* Hover Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    opacity: .8;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.2);
+}
+
+/* Hover Colors */
+.fa-info-circle:hover { color: #003cbd; }
+.fa-github:hover { color: #bd2c00; }
+
+/********** social media tooltips **********/
+ 
+.socialMediaTooltip {
+    display: inline-block;
+    position: relative;
+    opacity: 1;
+}
+
+.socialMediaTooltip .socialMediaTooltipInfo {
+    text-align: center;
+    position: absolute;
+    display: none;
+    background: rgb(199, 222, 243);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-size: 0.875em;
+    font-weight: bold;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: var(--tooltipWidth);
+    padding-top: .5em;
+    padding-bottom: var(--tooltipLength);
+    left: var(--tooltipPosition);
+    top: +22px;
+    height: 10px;
+    z-index: 2;
+    -webkit-animation: fadein .5s;
+    -moz-animation: fadein .5s;
+    -ms-animation: fadein .5s;
+    -o-animation: fadein .5s;
+    animation: fadein .5s;
+}
+
+/*  form triangle */
+.socialMediaTooltip .socialMediaTooltipInfo:before, .socialMediaTooltip .socialMediaTooltipInfo:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: +43%;
+}
+
+/* control the fill of the triangle */
+.socialMediaTooltip .socialMediaTooltipInfo:after {
+    top: -20px;
+    border: 11px solid transparent;
+    border-bottom-color: rgb(199, 222, 243);
+}   
+
+/* control the triangle border */
+.socialMediaTooltip .socialMediaTooltipInfo:before {
+    top: -21px;
+    border: 11px solid transparent;
+    border-bottom-color: #000000;
+}
+
+/* hover tooltip command */
+.socialMediaTooltip:hover .socialMediaTooltipInfo, .socialMediaTooltip:focus .socialMediaTooltipInfo {
+    display: inline-block;
+}

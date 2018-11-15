@@ -1,0 +1,133 @@
+<!-- chord-wheel.html : Kyle Laviana -->
+<html lang="en">
+<head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="chord-wheel.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon/site.webmanifest">
+    <script defer src="../../fontawesome-all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg.js"></script>
+    <script type="text/javascript" src="d3.v2.min.js"></script>
+    <script type="text/javascript" src="chord-wheel-head.js"></script>
+</head>
+<body>
+    <a href="../../index.html"><button id="homeButton"> HOME </button></a>
+    <div class="tooltips">
+        <div class="socialMediaTooltip">
+            <span class="fas fa-info-circle hvr-grow" style="padding-right: 0.55em"></span>
+            <p class="socialMediaTooltipInfo"  style="--tooltipLength: 15em; --tooltipWidth: 31em; --tooltipPosition: -15.4em">
+                <span class="info">
+                    The Chord Wheel is an interactive tool for music education, inspired by the experiments from Chrome Music Lab. It is built in Javascript, HTML, and CSS, with audio from the Web Audio API.
+                    <br /><br />
+                    The Chord Wheel’s intent is twofold: to both give kids new to music education a better understanding of chord progressions, and to give those with more music theory knowledge a convenient platform for experimenting with chord progressions. 
+                    Future iterations of the Chord Wheel look to cater more to songwriters, with adjustable tempos and sounds as well as a “beats” feature in the background to better explore melody lines over different chord progressions.
+                    <br /><br />
+                    Have a suggestion? Reach out at kyle@laviana.io!
+                </span>
+            </p>
+        </div>
+        <div class="socialMediaTooltip">
+            <a href="https://github.com/klaviana" target="_blank">
+                <span class="fab fa-github hvr-grow" style="padding-right: 0.55em"></span>
+            </a>
+            <p class="socialMediaTooltipInfo"  style="--tooltipLength: 4.5em; --tooltipWidth: 4em; --tooltipPosition: -3.7em">
+                <span class="info">See my repository on Github!</span>
+            </p>
+        </div>
+        <div class="socialMediaTooltip">
+            <a href="chord-wheel.html">
+                <span class="fas fa-sync-alt hvr-grow"></span>
+            </a>
+            <p class="socialMediaTooltipInfo"  style="--tooltipLength: 2.2em; --tooltipWidth: 4em; --tooltipPosition: -3.7em">
+                <span class="info">Reset Tokens</span>
+            </p>
+        </div>
+    </div>
+    <p id="theChordWheel">The Chord Wheel</p>
+    <div id="dropdownMenuWrapper">
+        <p>Please select a number of chords in the progression:</p>
+        <select id="chord">
+            <option selected disabled value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <p>Please select a key:</p>
+        <select id="key">
+            <option selected disabled value=""></option>
+            <option value="1">C</option>
+            <option value="2">G</option>
+            <option value="3">D</option>
+            <option value="4">A</option>
+            <option value="5">E</option>
+            <option value="6">B</option>
+            <option value="7">F #</option>
+            <option value="8">D♭</option>
+            <option value="9">A♭</option>
+            <option value="10">E♭</option>
+            <option value="11">B♭</option>
+            <option value="12">F</option>
+        </select>
+    </div>
+    <div id="svg-wrapper">
+    <svg id="mysvg" viewBox="0 0 100 100"></svg>
+    <button id="playButton" class="ytp-play-button ytp-button">
+        <svg id="buttonBox" viewBox="0 0 36 36" >
+            <path id="ytp-12" d="M11,10 L18,13.74 18,22.28 11,26 M18,13.74 L26,18 26,18 18,22.28">
+                <animate id="animation" begin="indefinite" attributeType="XML" attributeName="d" fill="freeze" from="M11,10 L17,10 17,26 11,26 M20,10 L26,10 26,26 20,26" to="M11,10 L18,13.74 18,22.28 11,26 M18,13.74 L26,18 26,18 18,22.28" dur="0.1s" keySplines=".4 0 1 1"
+                repeatCount="1"></animate>
+            </path>
+        </svg>
+    </button>
+    </div>
+    <br />
+    <br />
+    <div id="currentchordsWrapper">
+        <p>Current chords:</p>
+        <div id="currentchords">
+            <br />
+            <span id="currentchords1"></span>
+            <span id="currentchords2"></span>
+            <span id="currentchords3"></span>
+            <span id="currentchords4"></span>
+            <span id="currentchords5"></span>
+        </div>
+    </div>
+    <div id="commonchordsWrapper">
+        <p>Common chord progressions include:</p>
+        <div id="commonchords">
+            <p id="commonchord1"></p>
+            <p id="commonchord2"></p>
+            <p id="commonchord3"></p>
+            <p id="commonchord4"></p>
+        </div>
+    </div>
+    <script type="text/javascript" src="chord-wheel-body.js"></script>
+</body>
+</html>
+
+<!-- 
+    current bugs:
+    1. fixing droppable algorithm to avoid buginess when moving between chords 
+    2. dynamically assigning class in order to highlight chords in the key
+    3. restricting draggable items within svg container
+    4. removing droppability of svg circle button-container 
+    5. passing one token through an already dropped token makes reduced opacity disappear
+    6. fix clipping: web audio envelope?
+    
+    future iterations:
+    1. 'smart' chord progressions that use inversions not just root position
+    2. interface to change tempo -> stop(audioCtx.currentTime + x)
+    3. ability to choose different sounds
+    4. beats feature for songwriters
+    5. randomized choices out of larger database of chord progressions
+-->
+

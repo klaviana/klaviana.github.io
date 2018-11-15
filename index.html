@@ -1,1 +1,158 @@
-Hello World
+<!-- index.html : Kyle Laviana Online Portfolio -->
+
+<html lang="eng">    
+    <head>
+        <title>Kyle Laviana</title>
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 560px)" href="index.css">
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 559px)" href="index-mobile.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <script defer src="fontawesome-all.js"></script>
+        <!-- convert sidebar tooltips from hoverable to clickable on mobile -->
+        <script> 
+            function mobileClick() {
+                var mobileWindow = window.matchMedia("(max-width: 559px)");
+                if (mobileWindow.matches) {
+                    document.getElementById('hardwareText').href="";
+                    document.getElementById('manufacturingText').href="";
+                    document.getElementById('softwareText').href="";
+                    document.getElementById('photographyText').href="";
+                    document.getElementById('musicText').href="";
+                    document.getElementById('teachingText').href="";
+                } else {
+                    document.getElementById('hardwareText').removeAttribute("href");
+                    document.getElementById('manufacturingText').removeAttribute("href");
+                    document.getElementById('softwareText').removeAttribute("href");
+                    document.getElementById('photographyText').removeAttribute("href");
+                    document.getElementById('musicText').removeAttribute("href");
+                    document.getElementById('teachingText').removeAttribute("href");
+                }
+            }
+            window.onload = mobileClick;
+            window.onresize = mobileClick;
+        </script>
+    </head>  
+    <body> 
+        <!-- Top Border -->
+        <div id="topWrapper"><img id="topPic" src="photos/topBorder.png" class="stretch"></div>
+        <!-- Content -->
+        <div id="content">
+            <div id="index">
+                <img id="signature" src="photos/signature.png">
+                <hr>
+                <div id="indexText" class="indexAlign">
+                    <div class="sidebarTooltip">
+                        <a id="hardwareText"><p class="hvr-bold">Hardware Design </p></a>
+                        <div class="opacityWrapper">
+                            <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -31px; --sidebarTrianglePosition: +17px;">
+                                <a href="hardware-design/exocoder/exocoder.html">
+                                    <img src="photos/theexocoder.jpg" width="130em" class="sidebarPicture"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sidebarTooltip">
+                        <a id="manufacturingText"><p class="hvr-bold">Manufacturing Design </p></a>
+                        <div class="opacityWrapper">
+                            <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -65px; --sidebarTrianglePosition: +51px;">
+                                <a href="manufacturing-design/quickpick/quickpick.html">
+                                    <img src="photos/quickpick.jpg" width="130em" class="sidebarPicture"></a>
+                                <br /><br />
+                                <span>Coming Soon: <br /> CNC Machining</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sidebarTooltip">
+                        <a id="softwareText"><p class="hvr-bold">Software Design </p></a>
+                        <div class="opacityWrapper">
+                            <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -98px; --sidebarTrianglePosition: +84px;">
+                                <a href="software-design/chord-wheel/chord-wheel.html">
+                                    <img src="photos/thechordwheel.jpg" width="130em" class="sidebarPicture"></a>
+                                <br /><br />
+                                <span>Coming Soon: <br /> Unity 3D <br /> Sound Modeling</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sidebarTooltip">
+                        <a id="photographyText"><p class="hvr-bold">Photography </p></a>
+                        <div class="opacityWrapper">
+                            <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -130px; --sidebarTrianglePosition: +116px;">
+                                <a href="photography/conservation-photography/conservation-photography.html">
+                                    <img src="photos/costarica.jpg" width="130em" class="sidebarPicture"></a>
+                                <br /><br />
+                                <a href="photography/stanford-sierra-camp/stanford-sierra-camp.html">
+                                    <img src="photos/stanfordsierracamp.jpg" width="130em" class="sidebarPicture"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sidebarTooltip">
+                        <a id="musicText"><p class="hvr-bold">Music </p></a>
+                        <div class="opacityWrapper">
+                            <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -60px; --sidebarTrianglePosition: +46px;">
+                                <a href="music/composition/composition.html">
+                                    <img src="photos/composition.jpg" width="130em" class="sidebarPicture"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="photoWrapper">
+                <img id="portraitPic" src="photos/frontpagepic.png" width="100%">
+                <img id="textPic" src="photos/text.png" width="50%">
+            </div>
+            <div id="description">
+                <br />
+                <p class="descriptionAlign" style="font-weight: bold">Welcome! </p>
+                <p class="descriptionAlign">Navigate the sidebar to learn more about my projects, or <u class="hvr-bold">
+                    <a href="about-me/about-me.html">click here</a></u> to learn more about me. </p>
+                <div class="descriptionAlign">
+                    <div class="socialMediaTooltip">
+                        <a href="https://www.linkedin.com/in/kyle-laviana/" target="_blank">
+                            <span class="fab fa-linkedin hvr-grow" style="padding-right: 0.55em"></span>
+                        </a>
+                        <p class="socialMediaTooltipInfo"> <span class="info">LinkedIn</span> </p>
+                    </div>
+                    <div class="socialMediaTooltip">
+                        <a href="https://github.com/klaviana" target="_blank">
+                            <span class="fab fa-github hvr-grow" style="padding-right: 0.5em"></span>
+                        </a>
+                        <p class="socialMediaTooltipInfo"> <span class="info">GitHub</span> </p>
+                    </div>
+                    <div class="socialMediaTooltip">
+                        <a href="https://www.facebook.com/kyle.laviana" target="_blank">
+                            <span class="fab fa-facebook hvr-grow" style="padding-right: 0.7em"></span>
+                        </a>
+                        <p class="socialMediaTooltipInfo"> <span class="info">Facebook</span> </p>
+                    </div>
+                    <div class="socialMediaTooltip">
+                        <a href="Laviana_Resume.pdf" target="_blank">
+                            <span class="fa fa-file hvr-grow" style="padding-right: 0.7em"></span>
+                        </a>
+                        <p class="socialMediaTooltipInfo"> <span class="info">Resume</span> </p>
+                    </div>
+                    <div class="socialMediaTooltip">
+                        <a href="mailto:kyle@laviana.me">
+                            <span class="fa fa-envelope hvr-grow"></span>
+                        </a>
+                        <p class="socialMediaTooltipInfo"> <span class="info">kyle@laviana.me</span> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Border & Footer -->
+        <div id="bottomWrapper">
+            <img id="bottomPic" src="photos/bottomBorder.png" class="stretch">
+            <span class="bottomText" style="--bottomTextOffset: calc(15px + 1.25vmin)">
+                Made with <i class="fa fa-heart" id="heart"></i>, 
+                <i class="fa fa-coffee" id="coffee"></i>, and <i class="fa fa-code"></i> 
+            </span>
+            <span class="bottomText" style="--bottomTextOffset: calc(3px + .5vmin)">© 2018 Kyle Laviana</span>
+        </div>
+    </body>
+</html>
