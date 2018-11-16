@@ -9,6 +9,8 @@ body {
             animation: fadein 1s;
 }
 
+a { color:black } /* prevent href coloration */
+
 #topWrapper{
     height: 5vh;
 }
