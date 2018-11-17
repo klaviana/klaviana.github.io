@@ -87,7 +87,7 @@ a { color:black } /* prevent href coloration */
 
 #description{
     position: absolute;
-    right: calc(7.5% - 1vw);
+    right: calc(11% - 4vw);
     width: calc(50px + 10vw);
 }
 
