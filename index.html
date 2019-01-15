@@ -15,87 +15,75 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <script defer src="fontawesome-all.js"></script>
-        <!-- convert sidebar tooltips from hoverable to clickable on mobile -->
-        <script> 
-            function mobileClick() {
-                var mobileWindow = window.matchMedia("(max-width: 559px)");
-                if (mobileWindow.matches) {
-                    document.getElementById('hardwareText').href="";
-                    document.getElementById('manufacturingText').href="";
-                    document.getElementById('softwareText').href="";
-                    document.getElementById('photographyText').href="";
-                    document.getElementById('musicText').href="";
-                    document.getElementById('teachingText').href="";
-                } else {
-                    document.getElementById('hardwareText').removeAttribute("href");
-                    document.getElementById('manufacturingText').removeAttribute("href");
-                    document.getElementById('softwareText').removeAttribute("href");
-                    document.getElementById('photographyText').removeAttribute("href");
-                    document.getElementById('musicText').removeAttribute("href");
-                    document.getElementById('teachingText').removeAttribute("href");
-                }
-            }
-            window.onload = mobileClick;
-            window.onresize = mobileClick;
-        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </head>  
     <body> 
         <!-- Top Border -->
-        <div id="topWrapper"><img id="topPic" src="photos/topBorder.png" class="stretch"></div>
+        <img src="photos/topwhite.jpg" class="top white">
+        <img src="photos/topblue.jpg" class="top blue">
+        <!-- Left Side Border -->
+        <img src="photos/sidewhite.jpg" class="side white left">
+        <img src="photos/sideblue.jpg" class="side blue left">
         <!-- Content -->
         <div id="content">
             <div id="index">
                 <img id="signature" src="photos/signature.png">
                 <hr>
                 <div id="indexText" class="indexAlign">
-                    <div class="sidebarTooltip">
+                    <div class="sidebarTooltip" tabindex="0">
                         <a id="hardwareText"><p class="hvr-bold">Hardware Design </p></a>
                         <div class="opacityWrapper">
                             <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -31px; --sidebarTrianglePosition: +17px;">
-                                <a href="hardware-design/exocoder/">
+                                <a href="hardware-design/exocoder/" class="sidebarLink">
                                     <img src="photos/theexocoder.jpg" width="130em" class="sidebarPicture"></a>
                             </p>
                         </div>
                     </div>
-                    <div class="sidebarTooltip">
+                    <div class="sidebarTooltip" tabindex="0">
                         <a id="manufacturingText"><p class="hvr-bold">Manufacturing Design </p></a>
                         <div class="opacityWrapper">
                             <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -65px; --sidebarTrianglePosition: +51px;">
-                                <a href="manufacturing-design/quickpick">
-                                    <img src="photos/quickpick.jpg" width="130em" class="sidebarPicture"></a>
+                                <a href="manufacturing-design/viscous" class="sidebarLink">
+                                    <img src="photos/viscous.jpg" width="130em" class="sidebarPicture"></a>
                                 <br /><br />
-                                <span>Coming Soon: <br /> CNC Machining</span>
+                                <a href="manufacturing-design/quickpick" class="sidebarLink">
+                                    <img src="photos/quickpick.jpg" width="130em" class="sidebarPicture"></a>
+                                <!--<br /><br />
+                                <span><i>in the works</i>: <br /> Waterjet Cutting</span>-->
                             </p>
                         </div>
                     </div>
-                    <div class="sidebarTooltip">
+                    <div class="sidebarTooltip" tabindex="0">
                         <a id="softwareText"><p class="hvr-bold">Software Design </p></a>
                         <div class="opacityWrapper">
                             <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -98px; --sidebarTrianglePosition: +84px;">
-                                <a href="software-design/chord-wheel">
+                                <a href="software-design/vermont" class="sidebarLink">
+                                    <img src="photos/vermont.jpg" width="130em" class="sidebarPicture"></a>
+                                <br /><br />    
+                                <a href="software-design/chord-wheel" class="sidebarLink">
                                     <img src="photos/thechordwheel.jpg" width="130em" class="sidebarPicture"></a>
                                 <br /><br />
-                                <span>Coming Soon: <br /> Unity 3D <br /> Sound Modeling</span>
+                                <span><i>in the works</i>: <br /> Ambisonic VST Plug-in</span>
                             </p>
                         </div>
                     </div>
-                    <div class="sidebarTooltip">
+                    <div class="sidebarTooltip" tabindex="0">
                         <a id="photographyText"><p class="hvr-bold">Photography </p></a>
                         <div class="opacityWrapper">
                             <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -130px; --sidebarTrianglePosition: +116px;">
-                                <a href="photography/conservation-photography">
+                                <a href="photography/conservation-photography" class="sidebarLink">
                                     <img src="photos/costarica.jpg" width="130em" class="sidebarPicture"></a>
                                 <br /><br />
-                                <a href="photography/stanford-sierra-camp">
+                                <a href="photography/stanford-sierra-camp" class="sidebarLink">
                                     <img src="photos/stanfordsierracamp.jpg" width="130em" class="sidebarPicture"></a>
                             </p>
                         </div>
                     </div>
-                    <div class="sidebarTooltip">
+                    <div class="sidebarTooltip" tabindex="0">
                         <a id="musicText"><p class="hvr-bold">Music </p></a>
                         <div class="opacityWrapper">
                             <p class="sidebarTooltipInfo" style="--sidebarSquarePosition: -60px; --sidebarTrianglePosition: +46px;">
-                                <a href="music/composition">
+                                <a href="music/composition" class="sidebarLink">
                                     <img src="photos/composition.jpg" width="130em" class="sidebarPicture"></a>
                             </p>
                         </div>
@@ -145,14 +133,26 @@
                 </div>
             </div>
         </div>
+        <!-- Right Side Border -->
+        <img src="photos/sidewhite.jpg" class="side white right">
+        <img src="photos/sideblue.jpg" class="side blue right">
         <!-- Bottom Border & Footer -->
         <div id="bottomWrapper">
-            <img id="bottomPic" src="photos/bottomBorder.png" class="stretch">
-            <span class="bottomText" style="--bottomTextOffset: calc(15px + 1.25vmin)">
-                Made with <i class="fa fa-heart" id="heart"></i>, 
-                <i class="fa fa-coffee" id="coffee"></i>, and <i class="fa fa-code"></i> 
-            </span>
-            <span class="bottomText" style="--bottomTextOffset: calc(3px + .5vmin)">© 2018 Kyle Laviana</span>
+            <img src="photos/topwhite.jpg" class="bottom white">
+            <img src="photos/topblue.jpg" class="bottom blue">
         </div>
+        <script>
+            /* sidebar tooltip accessibility */
+            $(document).ready(function() {
+                $("div .sidebarLink").focusin(function() {
+                    $(this).parent().css({"visibility": "visible"});
+                    $(this).parent().parent().css({"opacity": "0.7"});
+                });
+                $("div .sidebarLink").focusout(function() {
+                    $(this).parent().css({"visibility": "hidden"});
+                    $(this).parent().parent().css({"opacity": "0.0"});
+                });
+            });
+        </script>
     </body>
 </html>

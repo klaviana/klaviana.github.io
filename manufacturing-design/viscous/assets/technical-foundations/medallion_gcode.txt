@@ -1,0 +1,98 @@
+%
+O08675 (SSC Medallion)
+(Kyle Laviana, Oct. 6 2018)
+(TI = .1875” 60deg. single lip cutter)
+N00 G0 G17 G20 G40 G49 G54 G80 G90 G94 G98; (safety block)
+N05 G91 G28 Z0. M5 (go to home)
+N10 T1 M6 (tool change to tool #1)
+N15 S8000 M3 (start spindle at 8000 rpm)
+N20 G90 G0 X0. Y0. (navigate to origin)
+N25 G43 H1 Z1. (tool length compensation)
+N30 G1 Z0.1 F20. M08 (clearance plane, coolant on)
+N35 X0.368 Y-0.2125 (navigate to lower right corner of mountains)
+N40 Z-.01 F8. (lower spindle)
+N45 G3 X-0.368 Y-.2125 I-0.368 J0.2125 (sun arc, counterclockwise)
+N50 G1 X-0.1845 Y0.079 (lines of mountains)
+N55 X-0.115 Y-0.023
+N60 X-0.1395 Y-0.0955
+N65 X0.0 Y0.3205
+N70 X0.1475 Y-0.0465
+N75 X0.105 Y-0.0955
+N80 X0.207 Y0.022
+N85 X0.368 Y-0.2125
+N90 Z.1 (lift spindle)
+N95 X-0.182 Y-0.303 (navigate to first letter)
+N100 Z-.01 (lower spindle)
+N105 G3 X-0.2305 Y-0.391 I-0.048 J-0.03065
+N110 G2 X-0.276 Y-0.472 I0.0 J-0.0535
+N115 G1 Z.1 (lift spindle)
+N120 X0.041 Y-0.303 (navigate to second letter)
+N125 Z-.01 (lower spindle)
+N130 G3 X-0.007 Y-0.391 I-0.048 J-0.03065
+N135 G2 X-0.0525 Y-0.472 I0.0 J-0.0535
+N140 G1 Z.1 (lift spindle)
+N145 X0.313 Y-0.2965 (navigate to third letter)
+N150 Z-.01 (lower spindle)
+N155 G3 X0.318 Y-0.4655 I-0.0625 J-0.0865
+N160 G1 Z.1 (lift spindle)
+N165 X-0.439 Y-0.2385 (navigate to sun ray 1)
+N170 Z-.01 (lower spindle)
+N175 X-0.4995 Y-0.2715
+N180 Z.1 (lift spindle)
+N185 X-0.4905 Y-0.0955 (navigate to sun ray 2)
+N190 Z-.01 (lower spindle)
+N195 X-0.6125 Y-0.119
+N200 Z.1 (lift spindle)
+N205 X-0.4975 Y0.058 (navigate to sun ray 3)
+N210 Z-.01 (lower spindle)
+N215 X-0.5735 Y0.067
+N220 Z.1 (lift spindle)
+N225 X-0.4575 Y0.204 (navigate to sun ray 4)
+N230 Z-.01 (lower spindle)
+N235 X-0.550 Y0.245
+N240 Z.1 (lift spindle)
+N245 X-0.376 Y0.3315 (navigate to sun ray 5)
+N250 Z-.01 (lower spindle)
+N255 X-0.439 Y0.387
+N260 Z.1 (lift spindle)
+N265 X-0.2455 Y0.4365 (navigate to sun ray 6)
+N270 Z-.01 (lower spindle)
+N275 X-0.324 Y0.576
+N280 Z.1 (lift spindle)
+N285 X-0.0865 Y0.4935 (navigate to sun ray 7)
+N290 Z-.01 (lower spindle)
+N295 X-0.0975 Y0.556
+N300 Z.1 (lift spindle)
+N305 X0.0825 Y0.494 (navigate to sun ray 8)
+N310 Z-.01 (lower spindle)
+N315 X0.100 Y0.599
+N320 Z.1 (lift spindle)
+N325 X0.2455 Y0.4365 (navigate to sun ray 9)
+N330 Z-.01 (lower spindle)
+N335 X0.331 Y0.5885
+N340 Z.1 (lift spindle)
+N345 X0.354 Y0.354 (navigate to sun ray 10)
+N350 Z-.01 (lower spindle)
+N355 X0.425 Y0.425
+N360 Z.1 (lift spindle)
+N365 X0.440 Y0.239 (navigate to sun ray 11)
+N370 Z-.01 (lower spindle)
+N375 X0.582 Y0.316
+N380 Z.1 (lift spindle)
+N385 X0.4915 Y0.097 (navigate to sun ray 12)
+N390 Z-.01 (lower spindle)
+N395 X0.605 Y0.112
+N400 Z.1 (lift spindle)
+N405 X0.4955 Y-0.075 (navigate to sun ray 13)
+N410 Z-.01 (lower spindle)
+N415 X0.567 Y-0.0855
+N420 Z.1 (lift spindle)
+N425 X0.4575 Y-0.204 (navigate to sun ray 14)
+N430 Z-.01 (lower spindle)
+N435 X0.5355 Y-0.2385
+N440 G0 Z1. M09 (spindle up, coolant off)
+N445 G91 G28 Z0. (navigate to home)
+N450 G28 Y0.
+N455 M5 (spindle off)
+N460 M30 (program end)
+%

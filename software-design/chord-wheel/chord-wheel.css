@@ -231,3 +231,52 @@ a { color:black } /* prevent href coloration */
 .socialMediaTooltip:hover .socialMediaTooltipInfo, .socialMediaTooltip:focus .socialMediaTooltipInfo {
     display: inline-block;
 }
+
+#mobileNote {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 481px) {
+    .tooltips {
+        position: relative;
+        float: none;
+        text-align: center;
+    }
+    #homeButton {
+        font-size: 16px;
+    }
+    #theChordWheel {
+        position: relative;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 5px;
+    }
+    #dropdownMenuWrapper {
+        font-size: 12px;
+        padding-top: 80px;
+        position: relative;
+    }
+    #currentchordsWrapper {
+        text-align: center;
+        float: none;
+        margin: auto;
+        font-size: 12px;
+    }
+    #currentchords {
+        float: none;
+        margin: auto;
+    }
+    #commonchordsWrapper {
+        text-align: center;
+        float: none;
+        margin: auto;
+        font-size: 12px;
+    }  
+    #commonchords {
+        float: none;
+        margin: auto;
+    } 
+    #mobileNote {
+        visibility: visible;
+    }
+}

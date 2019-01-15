@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: 'Jaldi', Verdana, sans-serif;
     font-size: 20px;
     line-height: 1.6;
 }
@@ -56,3 +56,20 @@ body {
     font-size: calc(5.5px + .65vw);
     margin: 0px 75px 0px 75px;
 }
+
+.bottomText {
+    position: fixed;
+    left: 1%;
+    bottom: var(--bottomTextOffset);
+    font-size: 14px; 
+    font-weight: bold;
+    color: white;
+    opacity: 1;
+    z-index: 1;
+}
+
+#heart { color: red; }
+#coffee { color: saddlebrown; }
+#code { color: black; }
+
+a:link {color: black;} a:visited {color: black;}

@@ -1,38 +1,16 @@
 /* stanford-sierra-camp.css : Kyle Laviana Online Portfolio */
 
-body {
-    font-family: "Raleway", Arial, sans-serif;
-}
-
-#homeButton {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-    border-radius: 5px;
-    font-size: 20px;
-    box-shadow: 3px 3px;
-    background-color: white;
-    color:#A0C6EA;
-    font-family: 'Raleway';
-    outline: none;
-}
-
-#homeButton:hover {
-    background-color: #A0C6EA;
-    color: white;
-}
-
 .header {
     padding: 128px 16px;
     text-align: center;
     opacity: .6;
+    font-family: "Raleway", Arial, sans-serif;
     letter-spacing: 6px;
+    margin: 10px 0;
 }
 
 h1 {
-    font-weight: 400;
-    margin: 10px 0;
+    font-weight: 200;
 }
 
 .padding img {
@@ -53,4 +31,69 @@ html {
     float: left;
     width: 100%;
     width: 49.99999%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 1px 8px #888888;
+    z-index: 2;
+}
+  
+li {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+  
+li a {
+    font-family: "Raleway", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 4px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #A0C6EA;
+    color: white;
+}
+
+.navbarName {
+  float: left;
+  font-weight: 600;
+}
+
+.navbarName:hover {
+    background-color: white;
+    color: black;
+}
+
+.navbarLink {
+    float: right;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 481px) {
+    li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+      
+    li a {
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 10px 10px;
+    }
 }
