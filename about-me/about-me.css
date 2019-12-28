@@ -28,6 +28,7 @@ body {
 
 #photo {
     position: fixed;
+    height: 100%;
     width: 50%;
     left: 0%;
     overflow: hidden;
