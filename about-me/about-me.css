@@ -41,6 +41,10 @@ body {
     right: calc(-350px + 10vw);
 }
 
+p {
+    margin-bottom: .8em;
+}
+
 #description {
     float: right;
     width: 50%;
