@@ -4,10 +4,9 @@ h1 {
     padding: 128px 16px;
     margin: 10px 0;
     text-align: center;
-    font-family: "Raleway", Arial, sans-serif;
-    font-weight: 300;
+    font-family: 'Alegreya', serif;
+    font-weight: lighter;
     letter-spacing: 6px;
-    color: black;
 }
 
 #topPic {
@@ -56,9 +55,8 @@ html {
     position: relative;
     color:black;
     font-size: 6vw;
-    font-family: 'Jaldi', Helvetica, sans-serif;
+    font-family: 'Alegreya', serif;
     letter-spacing: 3px;
-    font-weight: bold;
     line-height: 6vw;
     margin-top: -9px;
     margin-bottom: 1px;
@@ -129,8 +127,9 @@ li a:hover {
 }
 
 .navbarName {
-  float: left;
-  font-weight: bold;
+    float: left;
+    margin-bottom: -10px;
+    font-family: 'Alegreya', serif;
 }
 
 .navbarName:hover {

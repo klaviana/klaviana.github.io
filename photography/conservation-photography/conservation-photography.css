@@ -71,8 +71,9 @@ li a:hover {
 }
 
 .navbarName {
-  float: left;
-  font-weight: 600;
+    float: left;
+    margin-bottom: -10px;
+    font-family: 'Alegreya', serif;
 }
 
 .navbarName:hover {
